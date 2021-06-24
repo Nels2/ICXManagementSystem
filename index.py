@@ -1,5 +1,5 @@
-import Read_tech
-import Write_tech
+from jobs import Read_tech
+from jobs import Write_tech
 
 	
 def AppointmentIndexInTechDataBase (Client_ID) :
@@ -41,7 +41,7 @@ while tries_flag != "Close the program" :
 						AdminOptions = input ("Enter your choice : ")
 						AdminOptions = AdminOptions.upper()
 						
-						if AdminOptions == "1" :															#Admin mode --> Pateints Management
+						if AdminOptions == "1" :															#Admin mode --> Client Management
 								print("-----------------------------------------")
 								print("|To add new Client Enter 1	  	|")
 								print("|To display Client Enter 2	  	|")
@@ -52,7 +52,7 @@ while tries_flag != "Close the program" :
 								Admin_choice = input ("Enter your choice : ")
 								Admin_choice = Admin_choice.upper()
 								
-								if Admin_choice == "1" : 										#Admin mode --> Pateints Management --> Enter new Client data
+								if Admin_choice == "1" : 										#Admin mode --> client Management --> Enter new Client data
 											try :		#To avoid non integer input
 												Client_ID = int(input("Enter Client ID : "))
 												while Client_ID in Client_DataBase :		#if Admin entered used ID
@@ -66,7 +66,7 @@ while tries_flag != "Close the program" :
 											except :
 												print("Client ID should be an integer number")
 										
-								elif Admin_choice == "2" :										#Admin mode --> Pateints Management --> Display Client data
+								elif Admin_choice == "2" :										#Admin mode --> Client Management --> Display Client data
 											try :		#To avoid non integer input
 												Client_ID = int(input("Enter Client ID : "))
 												while Client_ID not in Client_DataBase :
@@ -78,7 +78,7 @@ while tries_flag != "Close the program" :
 											except :
 												print("Client ID should be an integer number")
 								
-								elif Admin_choice == "3" :										#Admin mode --> Pateints Management --> Delete Client data
+								elif Admin_choice == "3" :										#Admin mode --> client Management --> Delete Client data
 											try :		#To avoid non integer input
 												Client_ID = int(input("Enter Client ID : "))
 												while Client_ID not in Client_DataBase :
@@ -88,7 +88,7 @@ while tries_flag != "Close the program" :
 											except :
 												print("Client ID should be an integer number")
 										
-								elif Admin_choice == "4" :						 				#Admin mode --> Pateints Management --> Edit Client data
+								elif Admin_choice == "4" :						 				#Admin mode --> client Management --> Edit Client data
 											try :		#To avoid non integer input
 												Client_ID=int(input("Enter Client ID : "))
 												while Client_ID not in Client_DataBase :
@@ -125,7 +125,7 @@ while tries_flag != "Close the program" :
 											except :
 												print("Client ID should be an integer number")
 																				
-								elif Admin_choice == "E" :										#Admin mode --> Pateints Management --> Back
+								elif Admin_choice == "E" :										#Admin mode --> Client Management --> Back
 											break
 								
 								else :
